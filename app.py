@@ -39,8 +39,7 @@ def communicate():
 
 st.title(" コピーライティング")
 st.image("head.png")
-st.write(f"前提条件は以下、
-         {system_prompt}")
+st.write(f"前提条件は{system_prompt}")
 st.write("前提に従い在宅ワークについてAIがコピーライティングします。")
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)

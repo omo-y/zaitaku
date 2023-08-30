@@ -34,7 +34,7 @@ def communicate():
 
 
 st.title(" コピーライティング")
-st.image("06_fortunetelling.png")
+st.image("head.png")
 st.write(f"前提条件は以下、
          {system_prompt}")
 st.write("前提に従い在宅ワークについてAIがコピーライティングします。")

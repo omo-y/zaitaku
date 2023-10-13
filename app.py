@@ -23,8 +23,7 @@ seoコピーライティングのターゲットユーザーは「pdfファイ�
 """
 
 if "messages" not in st.session_state:
-    st.session_state["messages"] =
-        {"role": "system", "content": system_prompt}
+    st.session_state["messages"] = {"role": "system", "content": system_prompt}
       
 
 def communicate():

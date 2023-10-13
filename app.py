@@ -4,10 +4,6 @@ import openai
 openai.api_key = st.secrets.OpenAIAPI1.openai_api_new_key
 
 system_prompt = """
-あなたは、セールスライティングテクニックを用いてセールスライティングを行う優秀なセールスライターです。
-下記の前提に従って、指示のあった通りにライティング内容を回答してください。
-'''
-【前提】
 セールスライティングのターゲットユーザーは「スタートアップ企業」とする。
 受付業務などのサポート業務の人材が不足して、受付業務に工数が割けないスタートアップ企業に電話代行サービスの利用を勧める記事を、具体的な項目を挙げて詳細に回答してください。
 =======
@@ -19,12 +15,12 @@ seoコピーライティングのターゲットユーザーは「pdfファイ�
 記事の最後は、行動や考えにつながるようなまとめ文章で締めくくる。
 回答にキーワードの入った３０文字程度のタイトルをつける。
 なお、入力が「質問」から始まる場合は、今までの回答内容を踏まえて、自由に質問に回答してください
-'''
 """
 
 if "messages" not in st.session_state:
-    st.session_state["messages"] = {"role": "system", "content": system_prompt}
-      
+    st.session_state["messages"] = [
+        {"role": "system", "content": system_prompt}
+        ]
 
 def communicate():
     messages = st.session_state["messages"]

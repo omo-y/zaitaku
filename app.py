@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+import openai==0.27.10
 
 openai.api_key = st.secrets.OpenAIAPI1.openai_api_new_key
 
